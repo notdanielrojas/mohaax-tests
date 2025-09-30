@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mohaax"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.374">
+    <properties></properties>
+
+
+
+            <testcase
+                name="runBrunoApiTests"
+                time="3.374"
+                classname="BrunoApiTest">
+            </testcase>
+</testsuite>

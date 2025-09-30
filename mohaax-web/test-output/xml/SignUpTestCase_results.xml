@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mohaax"
+           tests="16"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="41.754">
+    <properties></properties>
+
+            <testcase
+                name="testSuccessfulRegistration"
+                time="17.184"
+                classname="SignUpTest">
+
+            <failure type="org.testng.internal.reflect.MethodMatcherException" message="
+[public void SignUpTest.testSuccessfulRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: testSuccessfulRegistration([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6])
+Arguments: [(java.lang.String) 1757704913_bffebc68user5,(java.lang.String) 1757704913_bffebc68email5@gmail.com,(java.lang.String) 10000,(java.lang.String) paz,(java.lang.String) paz,(java.lang.String) Usuario Creado Con éxito,(java.lang.String) getSuccessMessageText,(java.lang.String) Register using a password with less than 6 digits]">
+                <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void SignUpTest.testSuccessfulRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: testSuccessfulRegistration([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6])
+Arguments: [(java.lang.String) 1757704913_bffebc68user5,(java.lang.String) 1757704913_bffebc68email5@gmail.com,(java.lang.String) 10000,(java.lang.String) paz,(java.lang.String) paz,(java.lang.String) Usuario Creado Con éxito,(java.lang.String) getSuccessMessageText,(java.lang.String) Register using a password with less than 6 digits]
+                org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)org.testng.internal.Parameters.injectParameters(Parameters.java:915)org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)java.base/java.util.ArrayList.forEach(ArrayList.java:1604)org.testng.TestRunner.privateRun(TestRunner.java:741)org.testng.TestRunner.run(TestRunner.java:616)org.testng.SuiteRunner.runTest(SuiteRunner.java:421)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)org.testng.SuiteRunner.run(SuiteRunner.java:312)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)org.testng.TestNG.runSuitesLocally(TestNG.java:1208)org.testng.TestNG.runSuites(TestNG.java:1112)org.testng.TestNG.run(TestNG.java:1079)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </failure>
+    </testcase>
+
+
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.393"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testSuccessfulRegistration"
+                time="1.421"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.934"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testSuccessfulRegistration"
+                time="1.535"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testSuccessfulRegistration"
+                time="1.498"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.337"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testGetEmailValidationMessage"
+                time="1.717"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testSuccessfulRegistration"
+                time="2.064"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="2.540"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.281"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.211"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testSuccessfulRegistration"
+                time="1.928"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.941"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.514"
+                classname="SignUpTest">
+            </testcase>
+            <testcase
+                name="testInvalidRegisterData"
+                time="1.256"
+                classname="SignUpTest">
+            </testcase>
+</testsuite>

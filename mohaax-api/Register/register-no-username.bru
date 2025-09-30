@@ -1,0 +1,37 @@
+meta {
+  name: register-no-username
+  type: http
+  seq: 2
+}
+
+post {
+  url: //mohaax.cl/api/v1/players
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "",
+    "email": "usuario{{timestamp}}@gmail.com",
+    "volute": "10000",
+    "password": "Password#123",
+    "repeatPassword": "Password#123"
+  }
+  
+}
+
+tests {
+  test("Status code is 400", () => {
+    expect(res.status).to.equal(400);
+  });
+  
+  test("Username error message", () => {
+    expect(res.body.message).to.contain("Todos los campos son requeridos");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

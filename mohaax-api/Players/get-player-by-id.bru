@@ -1,0 +1,30 @@
+meta {
+  name: get-player-by-id
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://mohaax.cl/api/v1/players/24
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{AUTH_TOKEN}}
+  Content-Type: application/json
+}
+
+tests {
+  test("Status code is 201", () => {
+    expect(res.status).to.equal(201);
+  });
+  
+  test("Busqueda exitosa message", () => {
+    expect(res.body.message).to.equal("Jugador encontrado con éxito");
+  });
+}
+
+settings {
+  encodeUrl: true
+}

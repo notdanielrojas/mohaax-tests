@@ -1,0 +1,29 @@
+meta {
+  name: get-all-players
+  type: http
+  seq: 1
+}
+
+get {
+  url: //mohaax.cl/api/v1/players
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{AUTH_TOKEN}}
+}
+
+tests {
+  test("Status code is 201", () => {
+    expect(res.status).to.equal(201);
+  });
+  
+  test("Busqueda exitosa message", () => {
+    expect(res.body.message).to.equal("Playes encontrados Con éxito");
+  });
+}
+
+settings {
+  encodeUrl: true
+}

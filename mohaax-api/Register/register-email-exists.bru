@@ -1,0 +1,37 @@
+meta {
+  name: register-email-exists
+  type: http
+  seq: 7
+}
+
+post {
+  url: //mohaax.cl/api/v1/players
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "usuario{{timestamp}}",
+    "email": "{{USERNAME_EMAIL}}",
+    "volute": "10000",
+    "password": "Password#123",
+    "repeatPassword": "Password#123"
+  }
+  
+}
+
+tests {
+  test("Status code is 400 or 409", () => {
+    expect([400, 409]).to.include(res.status);
+  });
+  
+  test("Email exists error", () => {
+    expect(res.body.message).to.contain("Ya hay un jugador registrado con ese email");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

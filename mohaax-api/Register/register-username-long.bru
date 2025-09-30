@@ -1,0 +1,37 @@
+meta {
+  name: register-username-long
+  type: http
+  seq: 10
+}
+
+post {
+  url: //mohaax.cl/api/v1/players
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "usuario_larguisimo_{{timestamp}}_{{randomInt}}_test_error_servidor",
+    "email": "usuaria{{timestamp}}@gmail.com",
+    "volute": "10000",
+    "password": "Password#123",
+    "repeatPassword": "Password#123"
+  }
+  
+}
+
+tests {
+  test("Status code is 500", () => {
+    expect(res.status).to.equal(500);
+  });
+  
+  test("Server internal error", () => {
+    expect(res.body.message).to.contain("Hubo un error interno en el servidor");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

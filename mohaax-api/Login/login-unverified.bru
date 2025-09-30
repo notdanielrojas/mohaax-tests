@@ -1,0 +1,34 @@
+meta {
+  name: login-unverified
+  type: http
+  seq: 3
+}
+
+post {
+  url: //mohaax.cl/api/v1/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "{{UNVERIFIED_USERNAME}}",
+    "password": "{{UNVERIFIED_PASSWORD}}"
+  }
+  
+}
+
+tests {
+  test("Status code is 200", () => {
+    expect(res.status).to.equal(200);
+  });
+  
+  test("Unverified account message", () => {
+    expect(res.body.message).to.equal("Debes validar tu cuenta para iniciar sesión");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

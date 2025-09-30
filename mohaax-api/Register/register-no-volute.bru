@@ -1,0 +1,37 @@
+meta {
+  name: register-no-volute
+  type: http
+  seq: 4
+}
+
+post {
+  url: //mohaax.cl/api/v1/players
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "usuario{{timestamp}}",
+    "email": "usuario{{timestamp}}@gmail.com",
+    "volute": "",
+    "password": "Password#123",
+    "repeatPassword": "Password#123"
+  }
+  
+}
+
+tests {
+  test("Status code is 400", () => {
+    expect(res.status).to.equal(400);
+  });
+  
+  test("Volute empty message", () => {
+    expect(res.body.message).to.contain("Todos los campos son requeridos");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

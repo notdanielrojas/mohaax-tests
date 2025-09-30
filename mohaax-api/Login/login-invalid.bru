@@ -1,0 +1,33 @@
+meta {
+  name: login-invalid
+  type: http
+  seq: 2
+}
+
+post {
+  url: //mohaax.cl/api/v1/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "fakeuser{{randomInt}}@gmail.com",
+    "password": "wrongpass{{randomInt}}"
+  }
+}
+
+tests {
+  test("Status code is 200", () => {
+      expect(res.status).to.equal(200);
+  });
+  
+  test("Error message returned", () => {
+    expect(res.body.message).to.contain("Incorrecto");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

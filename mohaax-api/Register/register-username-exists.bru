@@ -1,0 +1,37 @@
+meta {
+  name: register-username-exists
+  type: http
+  seq: 8
+}
+
+post {
+  url: //mohaax.cl/api/v1/players
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "{{USERNAME_NICKNAME}}",
+    "email": "usuario{{timestamp}}@gmail.com",
+    "volute": "10000",
+    "password": "Password#123",
+    "repeatPassword": "Password#123"
+  }
+  
+}
+
+tests {
+  test("Status code is 400 or 409", () => {
+    expect([400, 409]).to.include(res.status);
+  });
+  
+  test("Username exists error", () => {
+    expect(res.body.message).to.contain("Ya hay un jugador con ese nombre");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+}

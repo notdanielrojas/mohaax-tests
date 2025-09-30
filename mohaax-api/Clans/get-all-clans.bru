@@ -1,0 +1,29 @@
+meta {
+  name: get-all-clans
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://mohaax.cl/api/v1/clanes
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{AUTH_TOKEN}}
+}
+
+tests {
+  test("Status code is 200", () => {
+    expect(res.status).to.equal(200);
+  });
+  
+  test("Busqueda exitosa message", () => {
+    expect(res.body.message).to.equal("Clanes obtenidos Con éxito");
+  });
+}
+
+settings {
+  encodeUrl: true
+}
