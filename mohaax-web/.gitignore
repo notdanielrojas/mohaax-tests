@@ -39,5 +39,9 @@ build/
 
 .env
 
-# Ignorar archivos de entorno de Bruno
-environments/*.bru
+# Ignorar archivos de entornos de Bruno
+*.bru
+*.env
+
+# Ignorar archivo de entornos Bruno
+mohaax-api/environments/mohaax.bru
